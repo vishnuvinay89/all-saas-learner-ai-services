@@ -1,4 +1,3 @@
-
 name: SAAS-Dev Deployment
 
 on:
@@ -24,5 +23,5 @@ jobs:
           key: ${{ secrets.SAAS_SSH_PRIVATE_KEY_DEV }}
           port: ${{ secrets.PORT_DEV }}
           script: |
-            cd /home/ubuntu/all-orchestration-service
+            cd /home/ubuntu/all-saas-services/all-saas-learner-ai-services-parent
             ./deploy.sh
