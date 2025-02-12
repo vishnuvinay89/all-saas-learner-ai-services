@@ -19,6 +19,9 @@ export class CreateLearnerProfileDto {
   tenantId: string;
 
   @ApiProperty()
+  cohortId: string;
+
+  @ApiProperty()
   session_id: string;
 
   @ApiProperty()

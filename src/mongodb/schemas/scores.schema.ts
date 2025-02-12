@@ -9,6 +9,9 @@ export class Score {
   @Prop({ required: true, index:true })
   tenantId: string;
 
+  @Prop({ required: true, index:true })
+  cohortId: string;
+
   @Prop({
     type: [
       {
