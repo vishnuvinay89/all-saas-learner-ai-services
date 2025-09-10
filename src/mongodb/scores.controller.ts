@@ -28,13 +28,13 @@ import {
 import { catchError, lastValueFrom, map } from 'rxjs';
 import { HttpService } from '@nestjs/axios';
 import { AxiosError } from 'axios';
-import ta_config from './config/language/ta';
-import en_config from './config/language/en';
+import ta_config from "./config/language/ta";
+import en_config from "./config/language/en";
 import gu_config from './config/language/gu';
 import or_config from './config/language/or';
 import hi_config from './config/language/hi';
 import kn_config from './config/language/kn';
-
+import lang_common_config from "./config/language/common/commonConfig";
 @ApiTags('scores')
 @Controller('scores')
 export class ScoresController {
@@ -668,6 +668,8 @@ export class ScoresController {
 
         createScoreData = {
           user_id: CreateLearnerProfileDto.user_id, // userid sent by client
+          tenantId:CreateLearnerProfileDto.tenantId,
+          cohortId:CreateLearnerProfileDto.cohortId,
           session: {
             session_id: CreateLearnerProfileDto.session_id, // working logged in session id
             sub_session_id: CreateLearnerProfileDto.sub_session_id || '', // used to club set recorded data within session
@@ -2188,6 +2190,8 @@ export class ScoresController {
 
         createScoreData = {
           user_id: CreateLearnerProfileDto.user_id,
+          tenantId:CreateLearnerProfileDto.tenantId,
+          cohortId:CreateLearnerProfileDto.cohortId,
           session: {
             session_id: CreateLearnerProfileDto.session_id, // working logged in session id
             sub_session_id: CreateLearnerProfileDto.sub_session_id || '', // used to club set recorded data within session
@@ -2765,6 +2769,8 @@ export class ScoresController {
 
         createScoreData = {
           user_id: CreateLearnerProfileDto.user_id, // userid sent by client
+          tenantId:CreateLearnerProfileDto.tenantId,
+          cohortId:CreateLearnerProfileDto.cohortId,
           session: {
             session_id: CreateLearnerProfileDto.session_id, // working logged in session id
             sub_session_id: CreateLearnerProfileDto.sub_session_id || '', // used to club set recorded data within session
@@ -3515,6 +3521,8 @@ export class ScoresController {
 
         createScoreData = {
           user_id: CreateLearnerProfileDto.user_id, // userid sent by client
+          tenantId:CreateLearnerProfileDto.tenantId,
+          cohortId:CreateLearnerProfileDto.cohortId,
           session: {
             session_id: CreateLearnerProfileDto.session_id, // working logged in session id
             sub_session_id: CreateLearnerProfileDto.sub_session_id || '', // used to club set recorded data within session
