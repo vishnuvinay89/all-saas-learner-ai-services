@@ -6,6 +6,12 @@ export class Score {
   @Prop({ required: true, unique: true, index: true })
   user_id: string; // userid sent by client
 
+  @Prop({ required: true, index:true })
+  tenantId: string;
+
+  @Prop({index:true })
+  cohortId: string;
+
   @Prop({
     type: [
       {

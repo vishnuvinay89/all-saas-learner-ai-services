@@ -32,6 +32,12 @@ export class CreateLearnerProfileDto {
 
   @ApiProperty()
   user_id: string;
+  
+  @ApiProperty()
+  tenantId: string;
+
+  @ApiProperty()
+  cohortId: string;
 
   @ApiProperty()
   session_id: string;
