@@ -305,6 +305,8 @@ export class ScoresController {
 
         createScoreData = {
           user_id: CreateLearnerProfileDto.user_id, // userid sent by client
+          tenantId:CreateLearnerProfileDto.tenantId,
+          cohortId:CreateLearnerProfileDto.cohortId,
           session: {
             session_id: CreateLearnerProfileDto.session_id, // working logged in session id
             sub_session_id: CreateLearnerProfileDto.sub_session_id || '', // used to club set recorded data within session
@@ -1031,6 +1033,8 @@ export class ScoresController {
 
         createScoreData = {
           user_id: CreateLearnerProfileDto.user_id, // userid sent by client
+          tenantId:CreateLearnerProfileDto.tenantId,
+          cohortId:CreateLearnerProfileDto.cohortId,
           session: {
             session_id: CreateLearnerProfileDto.session_id, // working logged in session id
             sub_session_id: CreateLearnerProfileDto.sub_session_id || '', // used to club set recorded data within session
@@ -1395,6 +1399,8 @@ export class ScoresController {
 
         createScoreData = {
           user_id: CreateLearnerProfileDto.user_id, // userid sent by client
+          tenantId:CreateLearnerProfileDto.tenantId,
+          cohortId:CreateLearnerProfileDto.cohortId,
           session: {
             session_id: CreateLearnerProfileDto.session_id, // working logged in session id
             sub_session_id: CreateLearnerProfileDto.sub_session_id || '', // used to club set recorded data within session
